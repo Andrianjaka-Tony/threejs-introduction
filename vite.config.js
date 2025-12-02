@@ -1,8 +1,9 @@
-import restart from "vite-plugin-restart";
+import { defineConfig } from "vite";
+import ViteRestart from "vite-plugin-restart";
 
-export default {
-  root: "src/",
-  publicDir: "../static/",
+export default defineConfig({
+  root: "src",
+  publicDir: "../static",
   server: {
     host: true,
     open: !("SANDBOX_URL" in process.env || "CODESANDBOX_HOST" in process.env),
@@ -12,5 +13,9 @@ export default {
     emptyOutDir: true,
     sourcemap: true,
   },
-  plugins: [restart({ restart: ["../static/**"] })],
-};
+  plugins: [
+    ViteRestart({
+      restart: ["../static/**"],
+    }),
+  ],
+});
