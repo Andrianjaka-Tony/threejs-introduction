@@ -1,0 +1,43 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Production build output
+/dist
+/build
+/out
+
+# Temporary files
+.temp/
+.tmp/
+
+# Editor/IDE specific
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.env.*.local
+.env.local
+
+# Vite specific
+.vite/
+vite.config.ts.timestamp*
+
+# Other common files to ignore
+coverage/
+*.bak
+*.swp
+*.swo
